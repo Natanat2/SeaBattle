@@ -47,7 +47,7 @@ class Ship:
 
     @property
     def dots(self):
-        shipdots = []
+        ship_dots = []
         for i in range(self.length):
             cur_x = self.bow.x
             cur_y = self.bow.y
@@ -57,8 +57,8 @@ class Ship:
             elif self.direction == 1:
                 cur_y += i
 
-            shipdots.append(Dot(cur_x, cur_y))
-        return shipdots
+            ship_dots.append(Dot(cur_x, cur_y))
+        return ship_dots
 
     def shoot(self, shot):
         return shot in self.dots
