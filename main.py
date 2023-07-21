@@ -217,10 +217,11 @@ class Game:
               '   ходы в формате x, y:\n'
               '      x - строка\n'
               '      y - столбец')
+
     def loop(self):
         num = 0
         while True:
-            print('-'*20)
+            print('-' * 20)
             print('Доска игрока:')
             print(self.us.board)
             print('-' * 20)
@@ -246,10 +247,10 @@ class Game:
                 break
             num += 1
 
-
     def start(self):
         self.greetings()
         self.loop()
 
-g= Game()
+
+g = Game()
 g.start()
