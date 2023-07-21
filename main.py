@@ -1,5 +1,12 @@
 from random import randint
 
+print('   -------------------- \n '
+      '    Игра морской бой \n'
+      '   -------------------- \n'
+      '   ходы в формате x, y:\n'
+      '      x - строка\n'
+      '      y - столбец')
+
 
 class MyException(Exception):
     pass
@@ -210,14 +217,6 @@ class Game:
             board = self.gen_board()
         return board
 
-    def greetings(self):
-        print('   -------------------- \n '
-              '    Игра морской бой \n'
-              '   -------------------- \n'
-              '   ходы в формате x, y:\n'
-              '      x - строка\n'
-              '      y - столбец')
-
     def loop(self):
         num = 0
         while True:
@@ -225,7 +224,7 @@ class Game:
             print('Доска игрока:')
             print(self.us.board)
             print('-' * 20)
-            print('Доска проивника:')
+            print('Доска противника:')
             print(self.ai.board)
             if num % 2 == 0:
                 print('-' * 20)
@@ -248,7 +247,6 @@ class Game:
             num += 1
 
     def start(self):
-        self.greetings()
         self.loop()
 
 
